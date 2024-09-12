@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/pitch-widget/static/js/main.cd9ffe59.js",
+    "index.html": "/pitch-widget/index.html",
+    "main.cd9ffe59.js.map": "/pitch-widget/static/js/main.cd9ffe59.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.cd9ffe59.js"
+  ]
+}
