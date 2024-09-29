@@ -1,0 +1,9 @@
+@use '../../styles/card';
+
+.template-container {
+    max-width: 720px;
+}
+
+.template-card {
+    @include card.card;
+}

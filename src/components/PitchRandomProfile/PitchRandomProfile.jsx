@@ -1,9 +1,9 @@
 import useServiceHook from "../hooks/useService.hook";
 
 const PitchRandomProfile = () => {
-    const { data, loading, error } = useServiceHook('https://pitch-dev-96b3a.ue.r.appspot.com/api/internal/profile/suggest')
+    const { data, loading, error } = useServiceHook('https://pitch-dev-96b3a.ue.r.appspot.com/api/internal/profile/suggest?seenUsers=')
     return (
-        <div>
+        <div className="profile-container">
             {loading ? <span>Loading...</span> :
                 (
                     <div>
@@ -13,7 +13,6 @@ const PitchRandomProfile = () => {
                     </div>
                 )
             }
-
         </div>
     )
 }
