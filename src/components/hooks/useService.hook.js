@@ -5,27 +5,27 @@ const useServiceHook = (url) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    useEffect(() => {
-        // Define an async function to fetch data
-        const fetchData = async () => {
-            try {
-                setLoading(true);
-                const response = await fetch(url);
+    // Define an async function to fetch data
+    const fetchData = async () => {
+        try {
+            setLoading(true);
+            const response = await fetch(url);
 
-                // Check if the response is OK (status code in the range 200-299)
-                if (!response.ok) {
-                    throw new Error(`Error: ${response.status}`);
-                }
-
-                const result = await response.json();
-                setData(result);
-            } catch (err) {
-                setError(err.message);
-            } finally {
-                setLoading(false);
+            // Check if the response is OK (status code in the range 200-299)
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status}`);
             }
-        };
 
+            const result = await response.json();
+            setData(result);
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
         // Call the async function
         fetchData().catch((e) => {
             setError(e.message)
@@ -40,7 +40,8 @@ const useServiceHook = (url) => {
     return {
         data,
         loading,
-        error
+        error,
+        fetchData
     }
 }
 

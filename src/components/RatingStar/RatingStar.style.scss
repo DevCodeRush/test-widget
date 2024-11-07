@@ -1,0 +1,21 @@
+.rating-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2px;
+}
+.rating-star {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    & > .star {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        overflow: hidden;
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

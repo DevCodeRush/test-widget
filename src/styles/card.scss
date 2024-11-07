@@ -3,7 +3,8 @@
 @mixin card {
   border-width: 1px;
   border-style: solid;
-  border-color: $ercuWhite;
+  border-color: darken($ercuWhite, 10%);
   border-radius: 8px;
-  padding: 16px;
+  box-shadow: 0 0 12px -2px $opaqueBlack;
+  overflow: hidden;
 }
