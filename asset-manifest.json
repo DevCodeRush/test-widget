@@ -2,7 +2,11 @@
   "files": {
     "main.css": "/test-widget/static/css/main.css",
     "main.js": "/test-widget/static/js/main.js",
+    "static/media/heart.svg": "/test-widget/static/media/heart.9deb57a85b16668e69727d8845cb1541.svg",
     "index.html": "/test-widget/index.html",
+    "static/media/chat.svg": "/test-widget/static/media/chat.ebded3c73a5cf0022ef5d611dd78dd56.svg",
+    "static/media/star-empty.svg": "/test-widget/static/media/star-empty.a08225a4588927f26723e87a2232639c.svg",
+    "static/media/star-fill.svg": "/test-widget/static/media/star-fill.4ed0737bd71b69816bd46cdf54123284.svg",
     "main.css.map": "/test-widget/static/css/main.css.map",
     "main.js.map": "/test-widget/static/js/main.js.map"
   },
