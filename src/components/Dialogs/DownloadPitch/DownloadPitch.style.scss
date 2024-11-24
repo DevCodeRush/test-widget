@@ -1,0 +1,48 @@
+@use '../../../styles/palatte';
+
+.download-pitch-dialog {
+  position: absolute;
+  top: 30%;
+  appearance: none;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 12px -2px palatte.$opaqueBlack;
+  background-image: radial-gradient(300% 200% at top left, palatte.$darkBlue, palatte.$brandSecondary70),
+  radial-gradient(ellipse at bottom left, palatte.$ercuWhite, transparent);
+  background-color: palatte.$ercuWhite;
+  padding: 20px 30px;
+  min-width: 380px;
+}
+
+.download-pitch-dialog__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.download-pitch-dialog__title {
+  position: relative;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: palatte.$ercuWhite;
+}
+
+.download-pitch-dialog__caption {
+  margin-top: 20px;
+  font-family: "Rubik", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+.download-pitch-dialog__app-line {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.download-pitch-dialog__qr {
+}

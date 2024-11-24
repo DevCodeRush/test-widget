@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 
-const useServiceHook = (url) => {
+const useServiceHook = (url, config = {}) => {
+    const apiKey = process.env.REACT_APP_PITCH_X_API_KEY
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -9,7 +10,15 @@ const useServiceHook = (url) => {
     const fetchData = async () => {
         try {
             setLoading(true);
-            const response = await fetch(url);
+            const requestConfig = {
+                ...config,
+                headers: {
+                    'X_API_KEY': apiKey,
+                },
+                method: 'GET',
+            }
+            const request = new Request(url, requestConfig);
+            const response = await fetch(request);
 
             // Check if the response is OK (status code in the range 200-299)
             if (!response.ok) {

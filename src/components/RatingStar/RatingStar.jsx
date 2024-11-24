@@ -1,8 +1,16 @@
-import starFill from './assests/star-fill.svg';
-import startEmpty from './assests/star-empty.svg';
+import { ReactComponent as StarFill } from './assests/star-fill.svg';
+import { ReactComponent as StartEmpty } from './assests/star-empty.svg';
 
 import './RatingStar.style.scss'
 
+/**
+ * Rating Stars component
+ * @param {Object} props
+ * @param {number} props.max
+ * @param {number} props.current
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const RatingStar = (props) => {
     const { max, current } = props;
 
@@ -16,11 +24,11 @@ export const RatingStar = (props) => {
 
     return <div className="rating-container">{
         stars.map(({sizePct}, index) => (<span key={index} className="rating-star">
-            <div className="star" style={{width: sizePct}}>
-                <img src={starFill} alt="filled star"/>
+            <div className="star filled" style={{width: sizePct}}>
+                <StarFill />
             </div>
-            <div className="star">
-                <img src={startEmpty} alt="empty star"/>
+            <div className="star empty">
+                <StartEmpty />
             </div>
         </span>))
     }</div>
