@@ -1,12 +1,13 @@
 import {useMemo, useState} from "react";
+import ReactLoading from "react-loading";
 
 import useServiceHook from "../hooks/useService.hook";
 import { RatingStar } from "../RatingStar";
+import { DownloadPitch } from "../Dialogs/DownloadPitch";
 
 import { ReactComponent as HeartIcon} from "./icons/heart.svg";
 import { ReactComponent as ChatIcon } from "./icons/chat.svg";
 import "./PitchTemplateGenerator.style.scss";
-import {DownloadPitch} from "../Dialogs/DownloadPitch/DownloadPitch";
 
 const PitchTemplateGenerator = () => {
     const { data, loading, fetchData, error } = useServiceHook('http://localhost:8080/api/internal/event-template/suggest')
@@ -32,7 +33,9 @@ const PitchTemplateGenerator = () => {
     return (
         <div>
             <div className="template-container">
-                {loading ? <span>Loading...</span> :
+                {loading ? <div>
+                    <ReactLoading type="spin" color="#095986" height={48} width={48}/>
+                    </div> :
                     (
                         <>{(!data || error) ? <div/> :
                             <div className="template-wrapper">

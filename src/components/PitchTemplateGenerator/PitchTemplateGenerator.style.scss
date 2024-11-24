@@ -7,10 +7,15 @@
     font-optical-sizing: auto;
     max-width: 360px;
     min-width: 320px;
+    min-height: 560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     * {
         box-sizing: border-box;
     }
 }
+
 
 .template-card {
     @include card.card;
